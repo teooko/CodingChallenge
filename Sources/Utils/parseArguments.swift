@@ -1,6 +1,7 @@
 import Foundation
 
 // Parse the console arguments
+
 let arguments = CommandLine.arguments
 
 func parseArguments() -> (Double, Double, String)? {

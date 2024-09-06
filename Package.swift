@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "swift-executable",
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-format.git", branch:("release/5.8"))
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.

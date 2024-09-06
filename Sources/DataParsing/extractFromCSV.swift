@@ -1,6 +1,7 @@
 import Foundation
 
 // Extract the specific shop fields from the data string
+
 func extractFromCSV(data: String) -> [Shop]? {
   var shops = [Shop]()
   let rows = data.components(separatedBy: "\n")
