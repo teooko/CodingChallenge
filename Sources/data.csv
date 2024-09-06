@@ -1,4 +1,193 @@
-Firstname,Last name,Age,Registered
-Duncan,Campbell,40,True
-Tobi,Dorner,36,False
-Saskia,Boogarts,29,True
+Starbucks Seattle,47.5809,-122.3160
+Starbucks SF,37.5209,-122.3340
+Starbucks Moscow,55.752047,37.595242
+Starbucks Seattle2,47.5869,-122.3368
+Starbucks Rio De Janeiro,-22.923489,-43.234418
+Starbucks Sydney,-33.871843,151.206767
+Starbucks New York,40.712776,-74.005974
+Starbucks Chicago,41.878113,-87.629799
+Starbucks Los Angeles,34.052235,-118.243683
+Starbucks Boston,42.360082,-71.058880
+Starbucks Miami,25.761681,-80.191788
+Starbucks Toronto,43.651070,-79.347015
+Starbucks Vancouver,49.282729,-123.120738
+Starbucks Montreal,45.501689,-73.567256
+Starbucks Mexico City,19.432608,-99.133209
+Starbucks São Paulo,-23.550520,-46.633308
+Starbucks Buenos Aires,-34.603722,-58.381592
+Starbucks London,51.507351,-0.127758
+Starbucks Paris,48.856613,2.352222
+Starbucks Berlin,52.520008,13.404954
+Starbucks Rome,41.902783,12.496366
+Starbucks Madrid,40.416775,-3.703790
+Starbucks Lisbon,38.722252,-9.139337
+Starbucks Barcelona,41.385064,2.173404
+Starbucks Amsterdam,52.367573,4.904139
+Starbucks Brussels,50.850346,4.351721
+Starbucks Zurich,47.376887,8.541694
+Starbucks Vienna,48.208174,16.373819
+Starbucks Stockholm,59.329323,18.068581
+Starbucks Oslo,59.913869,10.752245
+Starbucks Copenhagen,55.676098,12.568337
+Starbucks Helsinki,60.169857,24.938379
+Starbucks Athens,37.983810,23.727539
+Starbucks Istanbul,41.008238,28.978359
+Starbucks Dubai,25.276987,55.296249
+Starbucks Tokyo,35.689487,139.691711
+Starbucks Kyoto,35.011636,135.768029
+Starbucks Seoul,37.566536,126.977966
+Starbucks Beijing,39.904202,116.407394
+Starbucks Shanghai,31.230391,121.473701
+Starbucks Hong Kong,22.319303,114.169361
+Starbucks Taipei,25.033964,121.564468
+Starbucks Singapore,1.352083,103.819839
+Starbucks Kuala Lumpur,3.139003,101.686852
+Starbucks Bangkok,13.756331,100.501762
+Starbucks Jakarta,-6.208763,106.845599
+Starbucks Manila,14.599512,120.984222
+Starbucks Ho Chi Minh City,10.823099,106.629664
+Starbucks New Delhi,28.613939,77.209021
+Starbucks Mumbai,19.076090,72.877426
+Starbucks Bangalore,12.971599,77.594566
+Starbucks Sydney2,-33.868820,151.209290
+Starbucks Melbourne,-37.813629,144.963058
+Starbucks Auckland,-36.848461,174.763336
+Starbucks Brisbane,-27.469770,153.025124
+Starbucks Perth,-31.950527,115.860457
+Starbucks Adelaide,-34.928497,138.600739
+Starbucks Christchurch,-43.532054,172.636225
+Starbucks Cape Town,-33.924870,18.424055
+Starbucks Johannesburg,-26.204103,28.047305
+Starbucks Nairobi,-1.292066,36.821945
+Starbucks Cairo,30.044420,31.235712
+Starbucks Casablanca,33.573110,-7.589843
+Starbucks Istanbul2,41.015137,28.979530
+Starbucks Warsaw,52.229676,21.012229
+Starbucks Prague,50.075539,14.437800
+Starbucks Budapest,47.497913,19.040236
+Starbucks Bucharest,44.426767,26.102538
+Starbucks Sofia,42.697708,23.321868
+Starbucks Moscow2,55.751244,37.618423
+Starbucks Saint Petersburg,59.934280,30.335099
+Starbucks Helsinki2,60.169856,24.941024
+Starbucks Tallinn,59.437000,24.753575
+Starbucks Riga,56.949649,24.105186
+Starbucks Vilnius,54.687156,25.279651
+Starbucks Minsk,53.904541,27.561523
+Starbucks Kiev,50.450001,30.523333
+Starbucks Lviv,49.839683,24.029717
+Starbucks Belgrade,44.786568,20.448921
+Starbucks Zagreb,45.815399,15.966568
+Starbucks Ljubljana,46.056946,14.505751
+Starbucks Sarajevo,43.856430,18.413029
+Starbucks Skopje,41.998110,21.425417
+Starbucks Tirana,41.327546,19.818698
+Starbucks Podgorica,42.430419,19.259364
+Starbucks Pristina,42.662914,21.165503
+Starbucks Tallinn2,59.436961,24.753575
+Starbucks Riga2,56.949649,24.105186
+Starbucks Vilnius2,54.687156,25.279651
+Starbucks Minsk2,53.904541,27.561523
+Starbucks Dublin,53.349805,-6.260310
+Starbucks Belfast,54.597285,-5.930120
+Starbucks Edinburgh,55.953251,-3.188267
+Starbucks Glasgow,55.864239,-4.251806
+Starbucks Manchester,53.480759,-2.242631
+Starbucks Birmingham,52.486243,-1.890401
+Starbucks Liverpool,53.408371,-2.991573
+Starbucks Leeds,53.800755,-1.549077
+Starbucks Bristol,51.454514,-2.587910
+Starbucks Nottingham,52.954783,-1.158109
+Starbucks Sheffield,53.381129,-1.470085
+Starbucks Leeds2,53.801277,-1.548567
+Starbucks Sheffield2,53.379691,-1.468713
+Starbucks Cardiff,51.481583,-3.179090
+Starbucks Swansea,51.621441,-3.943646
+Starbucks Newport,51.584151,-2.997664
+Starbucks Aberdeen,57.149651,-2.099075
+Starbucks Dundee,56.462018,-2.970721
+Starbucks Inverness,57.477772,-4.224721
+Starbucks Perth2,56.395240,-3.431510
+Starbucks Chester,53.191502,-2.895619
+Starbucks Oxford,51.752022,-1.257677
+Starbucks Cambridge,52.205337,0.121817
+Starbucks Bath,51.375801,-2.359904
+Starbucks Brighton,50.822530,-0.137163
+Starbucks Southampton,50.909698,-1.404351
+Starbucks Portsmouth,50.819767,-1.087976
+Starbucks Exeter,50.718412,-3.533899
+Starbucks Plymouth,50.375456,-4.142656
+Starbucks Bournemouth,50.719164,-1.880769
+Starbucks Reading,51.454264,-0.978130
+Starbucks Norwich,52.630886,1.297355
+Starbucks Luton,51.878671,-0.420026
+Starbucks Milton Keynes,52.040623,-0.759417
+Starbucks Northampton,52.240479,-0.902656
+Starbucks Derby,52.922530,-1.474619
+Starbucks Leicester,52.636878,-1.139759
+Starbucks Coventry,52.406822,-1.519693
+Starbucks Stoke-on-Trent,53.002668,-2.179404
+Starbucks Wolverhampton,52.586973,-2.128820
+Starbucks Walsall,52.586214,-1.982919
+Starbucks Dudley,52.512255,-2.082983
+Starbucks Bolton,53.578474,-2.428219
+Starbucks Rochdale,53.616352,-2.161029
+Starbucks Wigan,53.545044,-2.631010
+Starbucks Blackpool,53.817505,-3.035674
+Starbucks Preston,53.763201,-2.703090
+Starbucks Lancaster,54.046575,-2.800739
+Starbucks Carlisle,54.892473,-2.932931
+Starbucks Newcastle,54.978252,-1.617439
+Starbucks Sunderland,54.906869,-1.383801
+Starbucks Durham,54.775250,-1.584853
+Starbucks Middlesbrough,54.574228,-1.234955
+Starbucks York,53.959012,-1.081549
+Starbucks Hull,53.767623,-0.327418
+Starbucks Grimsby,53.565529,-0.075826
+Starbucks Lincoln,53.230687,-0.540578
+Starbucks Ipswich,52.056736,1.148220
+Starbucks Colchester,51.889210,0.903552
+Starbucks Chelmsford,51.735586,0.468549
+Starbucks Southend,51.545926,0.707712
+Starbucks Hastings,50.854259,0.576403
+Starbucks Eastbourne,50.768036,0.290472
+Starbucks Worthing,50.817870,-0.372882
+Starbucks Basingstoke,51.266540,-1.092396
+Starbucks Winchester,51.062903,-1.316067
+Starbucks Guildford,51.236220,-0.570409
+Starbucks Maidenhead,51.522192,-0.719900
+Starbucks Slough,51.510538,-0.595040
+Starbucks High Wycombe,51.628611,-0.748229
+Starbucks Harrow,51.580594,-0.341875
+Starbucks Watford,51.655305,-0.396016
+Starbucks St Albans,51.751710,-0.336245
+Starbucks Hemel Hempstead,51.746229,-0.474462
+Starbucks Stevenage,51.902377,-0.202852
+Starbucks Bedford,52.136436,-0.460739
+Starbucks Peterborough,52.569498,-0.240530
+Starbucks Huntingdon,52.329729,-0.187495
+Starbucks Kettering,52.398999,-0.727521
+Starbucks Corby,52.487497,-0.703106
+Starbucks Leicester2,52.637472,-1.135171
+Starbucks Nuneaton,52.523230,-1.465054
+Starbucks Rugby,52.370876,-1.265032
+Starbucks Tamworth,52.632511,-1.695941
+Starbucks Burton upon Trent,52.806993,-1.643230
+Starbucks Stafford,52.805715,-2.117653
+Starbucks Telford,52.678419,-2.445258
+Starbucks Shrewsbury,52.708678,-2.754904
+Starbucks Hereford,52.056736,-2.715924
+Starbucks Worcester,52.192001,-2.220000
+Starbucks Gloucester,51.864244,-2.238156
+Starbucks Cheltenham,51.899386,-2.078253
+Starbucks Swindon,51.558428,-1.781684
+Starbucks Salisbury,51.068787,-1.794472
+Starbucks Weymouth,50.609707,-2.454951
+Starbucks Taunton,51.015344,-3.106510
+Starbucks Bridgwater,51.128047,-3.003540
+Starbucks Weston-super-Mare,51.344572,-2.977914
+Starbucks Yeovil,50.941599,-2.632062
+Starbucks Truro,50.263195,-5.051005
+Starbucks Exeter2,50.722537,-3.536324
+Starbucks Plymouth2,50.375316,-4.142979
+Starbucks Torquay,50.461920,-3.525315
