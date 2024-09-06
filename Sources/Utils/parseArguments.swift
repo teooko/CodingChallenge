@@ -1,19 +1,5 @@
 import Foundation
 
-// Calculate the distance from a shop to the user
-func calcDistance(from shop: Shop, to user: (Double, Double)) -> Double {
-  let distance = sqrt(pow(shop.coordX - user.0, 2) + pow(shop.coordY - user.1, 2))
-  return Double(round(10000 * distance) / 10000)
-}
-
-// Print the first 3 shops in the list
-func printFirstShops(from sortedShops: [(key: String, value: Double)])
-{
-  print("\(sortedShops[0].key),\(sortedShops[0].value)")
-  print("\(sortedShops[1].key),\(sortedShops[1].value)")
-  print("\(sortedShops[2].key),\(sortedShops[2].value)")
-}
-
 // Parse the console arguments
 let arguments = CommandLine.arguments
 

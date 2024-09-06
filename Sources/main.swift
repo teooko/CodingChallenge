@@ -4,11 +4,11 @@ import FoundationNetworking
 if let (x, y, filename) = parseArguments() {
     var finished = false
     
-    fetchDataFromURL(from: "https://raw.githubusercontent.com/Agilefreaks/test_oop/master/" + filename) { (result) in
+    fetchDataFromURL(from: Config.baseUrl + filename) { (result) in
       switch result {
         case .success(let data):
           var shopsDistanceDict = Dictionary<String, Double>()
-          guard let shops = extractDataFromCSV(data: data) else {
+          guard let shops = extractFromCSV(data: data) else {
             return
           }
           for shop in shops {
