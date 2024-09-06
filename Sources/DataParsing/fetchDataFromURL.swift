@@ -1,7 +1,7 @@
 import Foundation
 import FoundationNetworking
 
-func fetchDataFromURL(from urlString: String, completion: @escaping (Result<String, Error>) -> Void){
+func fetchDataFromURL(from urlString: String, completion: @escaping (Result<[Shop], Error>) -> Void){
     guard let url = URL(string: urlString) else {
         
         return
@@ -17,7 +17,9 @@ func fetchDataFromURL(from urlString: String, completion: @escaping (Result<Stri
             print("Unable to decode data")
             return
         }
-        completion(.success(string));
+        if let shops = extractFromCSV(data: string) {
+            completion(.success(shops));
+        } 
     }
 
     task.resume()

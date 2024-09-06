@@ -6,15 +6,13 @@ if let (x, y, filename) = parseArguments() {
     
     fetchDataFromURL(from: Config.baseUrl + filename) { (result) in
       switch result {
-        case .success(let data):
+        case .success(let shops):
           var shopsDistanceDict = Dictionary<String, Double>()
-          guard let shops = extractFromCSV(data: data) else {
-            semaphore.signal()
-            return
-          }
+
           for shop in shops {
             shopsDistanceDict[shop.name] = calcDistance(from: shop, to: (x, y))
           }
+          
           let sortedShops = shopsDistanceDict.sorted { $0.value < $1.value }
           printFirstShops(from: sortedShops)
 
