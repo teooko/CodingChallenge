@@ -2,13 +2,14 @@ import Foundation
 import FoundationNetworking
 
 if let (x, y, filename) = parseArguments() {
-    var finished = false
+    let semaphore = DispatchSemaphore(value: 0)
     
     fetchDataFromURL(from: Config.baseUrl + filename) { (result) in
       switch result {
         case .success(let data):
           var shopsDistanceDict = Dictionary<String, Double>()
           guard let shops = extractFromCSV(data: data) else {
+            semaphore.signal()
             return
           }
           for shop in shops {
@@ -20,12 +21,10 @@ if let (x, y, filename) = parseArguments() {
         case .failure(let error):
             print(error)
         }
-        finished = true
+        semaphore.signal()
     }
     
-    while !finished {
-      RunLoop.current.run(mode: .default, before: .distantFuture)
-  }
+    semaphore.wait()
 } else {
     print("Failed to parse arguments.")
 }
