@@ -7,13 +7,8 @@ if let (x, y, filename) = parseArguments() {
     fetchDataFromURL(from: Config.baseUrl + filename) { (result) in
       switch result {
         case .success(let shops):
-          var shopsDistanceDict = Dictionary<String, Double>()
-
-          for shop in shops {
-            shopsDistanceDict[shop.name] = calcDistance(from: shop, to: (x, y))
-          }
-          
-          let sortedShops = shopsDistanceDict.sorted { $0.value < $1.value }
+        
+          let sortedShops = sortShopsByDistance(shops: shops, userCoords: (x, y))
           printFirstShops(from: sortedShops)
 
         case .failure(let error):
