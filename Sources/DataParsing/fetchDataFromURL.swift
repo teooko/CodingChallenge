@@ -3,7 +3,7 @@ import Foundation
 import FoundationNetworking
 
 func fetchDataFromURL(
-  from urlString: String, completion: @escaping (Result<[Shop], ValidationError>) -> Void
+  from urlString: String, completion: @escaping (Result<[Shop], RequestError>) -> Void
 ) {
   guard let url = URL(string: urlString) else {
     completion(.failure(.invalidURL))
@@ -28,25 +28,24 @@ func fetchDataFromURL(
       return
     }
 
-    guard let shops = extractFromCSV(data: string) else {
-      completion(.failure(.parsingFailed))
-      return
+    do {
+      let shops = try extractFromCSV(data: string)
+      completion(.success(shops))
+    } catch {
+      completion(.failure(.parsingFailed(error.localizedDescription)))
     }
-
-    completion(.success(shops))
   }
-
   task.resume()
 }
 
-enum ValidationError: Error {
+enum RequestError: Error {
   case invalidURL
   case requestFailed
   case invalidResponse
-  case parsingFailed
+  case parsingFailed(String)
 }
 
-extension ValidationError: LocalizedError {
+extension RequestError: LocalizedError {
   var errorDescription: String? {
     switch self {
     case .invalidURL:
@@ -64,9 +63,9 @@ extension ValidationError: LocalizedError {
         "The server response was invalid",
         comment: ""
       )
-    case .parsingFailed:
+    case .parsingFailed(let errorText):
       return NSLocalizedString(
-        "Failed to parse the data",
+        "Failed to parse the data: \(errorText)",
         comment: ""
       )
     }

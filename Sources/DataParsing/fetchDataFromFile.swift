@@ -11,5 +11,11 @@ func fetchDataFromFile(from filename: String) -> [Shop]? {
     return nil
   }
 
-  return extractFromCSV(data: data)
+  do {
+    let shops = try extractFromCSV(data: data)
+    return shops
+  } catch {
+    print(error.localizedDescription)
+  }
+  return nil
 }
