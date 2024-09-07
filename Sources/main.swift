@@ -1,7 +1,5 @@
 import Foundation
 
-import FoundationNetworking
-
 if let (x, y, filename) = parseArguments() {
   let semaphore = DispatchSemaphore(value: 0)
 
@@ -13,7 +11,7 @@ if let (x, y, filename) = parseArguments() {
       printFirstShops(from: sortedShops)
 
     case .failure(let error):
-      print(error)
+      print(error.localizedDescription)
     }
     semaphore.signal()
   }
