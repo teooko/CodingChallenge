@@ -7,6 +7,7 @@ let package = Package(
         // Library product for core logic
         .library(
             name: "CodingChallenge",
+            type: .static,
             targets: ["CodingChallenge"]
         ),
         // Executable product
