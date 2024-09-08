@@ -2,7 +2,7 @@ import Foundation
 
 // Extract the specific shop fields from the data string
 
-func extractFromCSV(data: String) throws -> [Shop] {
+public func extractFromCSV(data: String) throws -> [Shop] {
   var shops = [Shop]()
   let rows = data.components(separatedBy: "\n")
 
@@ -26,13 +26,13 @@ func extractFromCSV(data: String) throws -> [Shop] {
   return shops
 }
 
-enum ExtractionError: Error {
+public enum ExtractionError: Error {
   case invalidCoordinate(Int, Character)
   case invalidEntry(Int)
 }
 
 extension ExtractionError: LocalizedError {
-  var errorDescription: String? {
+  public var errorDescription: String? {
     switch self {
     case .invalidCoordinate(let row, let coordinate):
       let format = NSLocalizedString(

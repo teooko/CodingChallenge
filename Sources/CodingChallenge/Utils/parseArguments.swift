@@ -4,7 +4,7 @@ import Foundation
 
 let arguments = CommandLine.arguments
 
-func parseArguments() -> (Double, Double, String)? {
+public func parseArguments() -> (Double, Double, String)? {
   if arguments.count > 4 {
     print("Error: Too many arguments")
     return nil

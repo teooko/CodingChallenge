@@ -1,17 +1,37 @@
 // swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
 import PackageDescription
 
 let package = Package(
-    name: "swift-executable",
-    dependencies: [
-        .package(url: "https://github.com/apple/swift-format.git", branch:("release/5.8"))
+    name: "CodingChallenge",
+    products: [
+        // Library product for core logic
+        .library(
+            name: "CodingChallenge",
+            targets: ["CodingChallenge"]
+        ),
+        // Executable product
+        .executable(
+            name: "CodingChallengeExecutable",
+            targets: ["CodingChallengeExecutable"]
+        ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        // Library target containing the core logic
+        .target(
+            name: "CodingChallenge",
+            path: "Sources/CodingChallenge"
+        ),
+        // Executable target
         .executableTarget(
-            name: "swift-executable"),
+            name: "CodingChallengeExecutable",
+            dependencies: ["CodingChallenge"],
+            path: "Sources/CodingChallengeExecutable"
+        ),
+        // Test target for the library
+        .testTarget(
+            name: "CodingChallengeTests",
+            dependencies: ["CodingChallenge"],
+            path: "Tests"
+        ),
     ]
 )

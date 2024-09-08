@@ -1,6 +1,6 @@
 import Foundation
 
-func sortShopsByDistance(shops: [Shop], userCoords: (x: Double, y: Double)) -> (
+public func sortShopsByDistance(shops: [Shop], userCoords: (x: Double, y: Double)) -> (
   [(key: String, value: Double)]
 ) {
   var shopsDistanceDict = [String: Double]()

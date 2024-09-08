@@ -2,7 +2,7 @@ import Foundation
 
 import FoundationNetworking
 
-func fetchDataFromURL(
+public func fetchDataFromURL(
   from urlString: String, completion: @escaping (Result<[Shop], RequestError>) -> Void
 ) {
   guard let url = URL(string: urlString) else {
@@ -38,7 +38,7 @@ func fetchDataFromURL(
   task.resume()
 }
 
-enum RequestError: Error {
+public enum RequestError: Error {
   case invalidURL
   case requestFailed
   case invalidResponse
@@ -46,7 +46,7 @@ enum RequestError: Error {
 }
 
 extension RequestError: LocalizedError {
-  var errorDescription: String? {
+  public var errorDescription: String? {
     switch self {
     case .invalidURL:
       return NSLocalizedString(
