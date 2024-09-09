@@ -69,6 +69,26 @@ final class CodingChallengeTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
 
+        func testFailureFetchDataFromURLBadStatusCode() {
+        let urlString = "https://example.com/success.csv"
+
+        setupMockResponse(for: urlString, data: nil, statusCode: 400)
+
+        let expectation = self.expectation(description: "Completion handler invoked")
+
+        fetchDataFromURL(from: urlString, session: session) { result in
+            switch result {
+            case .success:
+                XCTFail("Expected failure but got success")
+            case .failure(let error):
+                XCTAssertEqual(.invalidResponse, error)
+            }
+            expectation.fulfill()
+        }
+
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+
     // func testFailureFetchDataFromURLBadURL() {
     //     let urlString = "https://example.com/success.csv"
     //     let mockData = "Starbucks Seattle,47.5809,-122.3160".data(using: .utf8)
