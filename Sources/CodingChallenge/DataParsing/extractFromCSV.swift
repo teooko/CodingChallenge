@@ -4,6 +4,9 @@ import Foundation
 
 public func extractFromCSV(data: String) throws -> [Shop] {
   var shops = [Shop]()
+
+  // Based on the editor configuration, the \n symbol might
+  // get replaced by \r\n.
   let rows = data.components(separatedBy: "\n")
 
   for (index, row) in rows.enumerated() {

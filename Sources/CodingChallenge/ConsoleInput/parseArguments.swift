@@ -8,7 +8,7 @@ func parseArguments() -> (Double, Double, String) {
     if let userCoordX = readLine(), let x = Double(userCoordX) {
       coordX = x
     } else {
-      print("Invalid coordinate X. Please try again.")
+      print("Invalid coordinate X")
     }
   } while coordX == nil
 
@@ -17,16 +17,16 @@ func parseArguments() -> (Double, Double, String) {
     if let userCoordY = readLine(), let y = Double(userCoordY) {
       coordY = y
     } else {
-      print("Invalid coordinate Y. Please try again.")
+      print("Invalid coordinate Y")
     }
   } while coordY == nil
 
   repeat {
     print("Please introduce the file name: ")
-    if let inputFile = readLine(), !inputFile.isEmpty {
+    if let inputFile = readLine(), !inputFile.isEmpty && inputFile.hasSuffix(".csv") {
       file = inputFile
     } else {
-      print("Invalid file name. Please try again.")
+      print("Invalid file name")
     }
   } while file == nil
 

@@ -1,5 +1,7 @@
 import Foundation
 
+// Load the data from a local csv file placed in the CSVFiles folder
+
 func fetchDataFromFile(from filename: String) -> [Shop]? {
   let fileURL = URL(fileURLWithPath: "CSVFiles/\(filename)")
   var data = ""
