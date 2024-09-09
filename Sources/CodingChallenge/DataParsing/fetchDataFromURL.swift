@@ -11,7 +11,7 @@ public func fetchDataFromURL(
     completion(.failure(.invalidURL))
     return
   }
-
+  print("URL ULR URL \(url)")
   let task = session.dataTask(with: url) { data, response, error in
     if error != nil {
       completion(.failure(.requestFailed))
@@ -25,7 +25,7 @@ public func fetchDataFromURL(
       return
     }
 
-    guard let data = data, let string = String(data: data, encoding: .utf8) else {
+    guard let data = data, !data.isEmpty, let string = String(data: data, encoding: .utf8) else {
       completion(.failure(.invalidResponse))
       return
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-public enum RequestError: Error {
+public enum RequestError: Error, Equatable {
   case invalidURL
   case requestFailed
   case invalidResponse
