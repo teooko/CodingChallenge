@@ -1,3 +1,4 @@
+import FoundationNetworking
 import Foundation
 
 public func processRemoteData(from filename: String, x: Double, y: Double) {
@@ -7,7 +8,7 @@ public func processRemoteData(from filename: String, x: Double, y: Double) {
   // on Windows, I had to use this method.
   let semaphore = DispatchSemaphore(value: 0)
 
-  fetchDataFromURL(from: Config.baseUrl + filename) { (result) in
+  fetchDataFromURL(from: Config.baseUrl + filename, session: URLSession.shared) { (result) in
     switch result {
     case .success(let shops):
       let sortedShops = sortShopsByDistance(shops: shops, userCoords: (x, y))

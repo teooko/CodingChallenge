@@ -3,14 +3,16 @@ import Foundation
 import FoundationNetworking
 
 public func fetchDataFromURL(
-  from urlString: String, completion: @escaping (Result<[Shop], RequestError>) -> Void
+  from urlString: String,
+  session: URLSession = URLSession.shared,
+  completion: @escaping (Result<[Shop], RequestError>) -> Void
 ) {
   guard let url = URL(string: urlString) else {
     completion(.failure(.invalidURL))
     return
   }
 
-  let task = URLSession.shared.dataTask(with: url) { data, response, error in
+  let task = session.dataTask(with: url) { data, response, error in
     if error != nil {
       completion(.failure(.requestFailed))
       return
