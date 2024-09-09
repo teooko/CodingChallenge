@@ -1,7 +1,7 @@
 import Foundation
 
 public func handleProgramExecution() {
-    if let (x, y, filename) = parseArguments() {
+    let (x, y, filename) = parseArguments() 
     let semaphore = DispatchSemaphore(value: 0)
 
     fetchDataFromURL(from: Config.baseUrl + filename) { (result) in
@@ -18,7 +18,4 @@ public func handleProgramExecution() {
     }
 
     semaphore.wait()
-  } else {
-    print("Failed to parse arguments.")
-  }
 }

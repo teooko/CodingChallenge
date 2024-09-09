@@ -1,28 +1,34 @@
-import Foundation
+func parseArguments() -> (Double, Double, String) {
+    var coordX: Double?
+    var coordY: Double?
+    var file: String?
 
-// Parse the console arguments
+    repeat {
+        print("Please introduce the X coordinate: ")
+        if let userCoordX = readLine(), let x = Double(userCoordX) {
+            coordX = x
+        } else {
+            print("Invalid coordinate X. Please try again.")
+        }
+    } while coordX == nil
 
-let arguments = CommandLine.arguments
+    repeat {
+        print("Please introduce the Y coordinate: ")
+        if let userCoordY = readLine(), let y = Double(userCoordY) {
+            coordY = y
+        } else {
+            print("Invalid coordinate Y. Please try again.")
+        }
+    } while coordY == nil
 
-public func parseArguments() -> (Double, Double, String)? {
-  if arguments.count > 4 {
-    print("Error: Too many arguments")
-    return nil
-  }
-  if arguments.count < 4 {
-    print("Error: Too few arguments")
-    return nil
-  }
+    repeat {
+        print("Please introduce the file: ")
+        if let inputFile = readLine(), !inputFile.isEmpty {
+            file = inputFile
+        } else {
+            print("Invalid file name. Please try again.")
+        }
+    } while file == nil
 
-  guard let userCoordX = Double(arguments[1]) else {
-    print("Error: Invalid coordinate X")
-    return nil
-  }
-  guard let userCoordY = Double(arguments[2]) else {
-    print("Error: Invalid coordinate Y")
-    return nil
-  }
-  let file = arguments[3]
-
-  return (userCoordX, userCoordY, file)
+    return (coordX!, coordY!, file!)
 }
