@@ -1,14 +1,14 @@
 func parseArguments() -> (Double, Double, String) {
-    var coordX: Double?
-    var coordY: Double?
-    var file: String?
+  var coordX: Double?
+  var coordY: Double?
+  var file: String?
 
-    repeat {
-        print("Please introduce the X coordinate: ")
-        if let userCoordX = readLine(), let x = Double(userCoordX) {
-            coordX = x
-        } else {
-            print("Invalid coordinate X. Please try again.")
+  repeat {
+    print("Please introduce the X coordinate: ")
+    if let userCoordX = readLine(), let x = Double(userCoordX) {
+        coordX = x
+    } else {
+      print("Invalid coordinate X. Please try again.")
         }
     } while coordX == nil
 
@@ -22,7 +22,7 @@ func parseArguments() -> (Double, Double, String) {
     } while coordY == nil
 
     repeat {
-        print("Please introduce the file: ")
+        print("Please introduce the file name: ")
         if let inputFile = readLine(), !inputFile.isEmpty {
             file = inputFile
         } else {

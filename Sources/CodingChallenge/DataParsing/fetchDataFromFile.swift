@@ -1,7 +1,7 @@
 import Foundation
 
 func fetchDataFromFile(from filename: String) -> [Shop]? {
-  let fileURL = URL(fileURLWithPath: filename)
+  let fileURL = URL(fileURLWithPath: "CSVFiles/\(filename)")
   var data = ""
 
   do {
