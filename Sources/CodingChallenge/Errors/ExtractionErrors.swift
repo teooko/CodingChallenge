@@ -1,6 +1,6 @@
 import Foundation
 
-public enum ExtractionError: Error {
+public enum ExtractionError: Error, Equatable {
   case invalidCoordinate(Int, Character)
   case invalidEntry(Int)
 }
